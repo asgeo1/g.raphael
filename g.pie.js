@@ -227,7 +227,9 @@
                     south: [-r - bb.width / 2, r + 10]
                 }[dir];
 
-            chart.labels.translate.apply(chart.labels, tr);
+            if(dir != 'east')
+                chart.labels.translate.apply(chart.labels, tr);
+
             chart.push(chart.labels);
         };
 
